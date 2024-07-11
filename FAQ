@@ -1,0 +1,19 @@
+Is the BRC20 tick size-sensitive?#
+In BRC20, the tick is case-insensitive and is checked if it already exists; if it does, it is invalid. The tick must be equal to 4 bytes.
+
+Can the amount in BRC20 engraving JSON be a decimal?#
+The amount in BRC20 engraving JSON can be a decimal, but it cannot exceed the precision. Also, the integer part cannot be omitted, for example: ".11" is invalid.
+
+Does BRC20 engraving JSON allow non-protocol fields?#
+BRC20 engraving JSON allows non-protocol fields as long as the protocol fields are present; a standard JSON string is required. At the same time, in BRC20 protocol, JSON's key fields must all be lowercase, values must be strings, p can only be "BRC-20" (case-sensitive), and op is "deploy", "mint", "transfer". Required fields must be included.
+
+What are the constraints on the amt in BRC20 mint engraving?#
+The number of decimal places in amt must be less than the current tick's precision.
+amt must be a positive number.
+amt cannot be greater than the limit per mint.
+If the minted amount is greater than the supply (already minted to the maximum amount), it is invalid.
+If the amt in the Mint function exceeds the limit, only the amount up to the limit is issued. For example, if the limit is 1000 and 990 have already been issued, and this mint amt = 100, then only 10 will be issued this time.
+What are the constraints on the amt in BRC20 transfer engraving?#
+The number of decimal places in amt must be less than the current tick's precision.
+amt must be a positive number.
+amt must be greater than the available balance of the current from. Balance description: Total amount in the wallet = Available balance + Transferable balance (the sum of all transfers in this token that have not been transferred). If the address does not have a transferable balance, the available balance is equal to the total balance.
