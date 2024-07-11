@@ -1,0 +1,22 @@
+{
+    "code": "0",
+    "data": [
+        {
+            "chainIndex": "1",
+            "tokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "symbol": "USDT",
+            "balance": "0.688467",
+            "tokenPrice": "0.99993",
+            "tokenType": "1"
+        },
+        {
+            "chainIndex": "1",
+            "tokenAddress": "0x514910771af9ca656af840dff83e8264ecf986ca",
+            "symbol": "LINK",
+            "balance": "0.000000366257612925",
+            "tokenPrice": "14.108071299717093",
+            "tokenType": "1"
+        }
+    ],
+    "msg": "success"
+}
