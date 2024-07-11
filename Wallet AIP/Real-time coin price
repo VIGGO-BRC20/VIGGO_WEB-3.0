@@ -1,0 +1,3 @@
+Batch query the real-time prices of cryptocurrencies. Up to 20 tokens can be queried in one request, in the array format shown in the request example.
+Request Path#
+POST https://www.okx.com/api/v5/waas/wallet/token/current-price
