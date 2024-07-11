@@ -1,0 +1,41 @@
+Create a user wallet account that can be bound to multiple addresses, enabling aggregated queries of assets and transaction history.
+
+Note
+To use this API, you need to use the offline SDK to generate a signature with the private key based on the current UNIX timestamp and attach it to the API request parameters.
+Request Path#
+POST https://www.okx.com/api/v5/waas/wallet/account/create-account
+Reques Exameple
+curl --location --request POST 'https://www.okx.com/api/v5/waas/wallet/account/create-account' \
+--header 'Content-Type: application/json' \
+--header 'OK-ACCESS-PROJECT: 86af********d1bc' \
+--header 'OK-ACCESS-KEY: 37c541a1-****-****-****-10fe7a038418' \
+--header 'OK-ACCESS-SIGN: leaV********3uw=' \
+--header 'OK-ACCESS-PASSPHRASE: 1****6' \
+--header 'OK-ACCESS-TIMESTAMP: 2023-10-18T12:21:41.274Z' \
+--data-raw '{
+    "addresses": [
+        {
+            "chainIndex":"1",
+            "address":"0x561815e02bac6128bbbbc551005ddfd92a5c24db",
+            "publicKey":"02012db63bf0380294a6ecf87615fe869384b0510cb910a094254b6844af023ee2",
+            "signature":"62acda5e471d9bf0099add50f4845256868d980821c161095651a918d3ef8a6b2286f512028172eabbe46ec2c9c2c20e5c40ff1fb23e1cdfdbed033ad924ce521b"
+        },{
+            "chainIndex":"0",
+            "address":"bc1p939endmmt6pvz7ukeywpfsazz57cc4vdu3d0qerz6crhgrtmerfssls5wy",
+            "publicKey":"02e42fd7d3c88bcf014386fa06b5c9eca62778e082b0c6289aac259f2f8b555823",
+            "signature":"HxAvRe7XMzSNKN86fJ3F9W+fLiqaD7EENyEzZkInLu8gYZ+zZN/YPDse919/HSBhBEm83rzU6rOZkumhgouj+Z0="
+        }
+    ],
+    "signMessage":"1717062864211"
+}'
+Response Example#
+200
+{
+    "code": "0",
+    "data": [
+        {
+            "accountId": "13886e05-1265-4b79-8ac3-b7ab46217655"
+        }
+    ],
+    "msg": "success"
+}
