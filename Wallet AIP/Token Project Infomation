@@ -1,0 +1,37 @@
+Query additional information about a single token, such as token contract address, official token website URL, and social media links.
+{
+    "code": "0",
+    "msg": "success",
+    "data": [
+        {
+            "logoUrl": "https://static.oklink.com/cdn/web3/currency/token/bnb-wpc-0x6f620ec89b8479e97a6985792d0c64f237566746.png/type=png_350_0",
+            "officialWebsite": "https://www.wepiggy.com/",
+            "socialUrls": {
+                "messageboard": [
+                    "https://wepiggy-com.medium.com/"
+                ],
+                "github": [
+                    "https://github.com/WePiggy"
+                ],
+                "twitter": [
+                    "https://twitter.com/wepiggydotcom"
+                ],
+                "chat": [
+                    "https://t.me/wepiggy;https://discord.com/invite/pew9k58"
+                ],
+                "reddit": [
+                    "https://reddit.com/r/WePiggy/"
+                ]
+            },
+            "decimals": "18",
+            "tokenAddress": "0x6f620ec89b8479e97a6985792d0c64f237566746",
+            "chainIndex": "56",
+            "chainName": "BNB Chain",
+            "symbol": "wpc",
+            "maxSupply": "200000000.000000000000000",
+            "totalSupply": "",
+            "volume24h": "283632981.281666040000000",
+            "marketCap": "34510982165.370000000000000"
+        }
+    ]
+}
